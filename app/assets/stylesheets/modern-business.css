@@ -79,6 +79,18 @@ footer {
   max-width: 200px;
 }
 
+.opacity {
+  opacity: 0.95;
+}
+
+/* JUMBO BABIES */
+
+.jumbotron {
+  background-image: url('bg-miami.jpg');
+  background-size: cover;
+  height: 100%;
+}
+
 /* Responsive Styles */
 
 @media(max-width:991px) {
