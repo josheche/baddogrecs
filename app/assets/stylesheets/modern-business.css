@@ -73,30 +73,6 @@ footer {
     margin: 50px 0;
 }
 
-/*Logo styles*/
-
-.baddog-logo {
-  max-width: 200px;
-}
-
-.opacity {
-  opacity: 0.95;
-}
-
-/* JUMBO BABIES */
-
-.jumbotron {
-  background-image: url('bg-miami.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 100%;
-}
-
-/*nav stuffs*/
-
-.navbar {
-  box-shadow: -1px 1px 1px #000;
-}
 
 /* Responsive Styles */
 
