@@ -12,6 +12,7 @@ body {
 }
 
 body {
+    font-family: Lato;
     padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
@@ -110,10 +111,26 @@ footer {
   background-size: cover;
   background-position: center;
   height: 100%;
+  margin-bottom: 0;
+}
+
+.big-logo {
+  margin-top: 25px;
 }
 
 /*nav stuffs*/
 
 .navbar {
   box-shadow: -1px 1px 1px #000;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-family: Lato;
+  font-weight: 200;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #999999;
 }
