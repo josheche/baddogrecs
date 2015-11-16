@@ -9,6 +9,8 @@
 html,
 body {
     height: 100%;
+    background-color: #000000;
+    color: #eeeeee;
 }
 
 body {
@@ -92,6 +94,13 @@ footer {
     header.carousel .carousel {
         height: 70%;
     }
+    .big-logo {
+      max-width: 250px;
+    }
+}
+
+.navbar-inverse .navbar-toggle {
+  border: none;
 }
 
 /*Logo styles*/
@@ -126,6 +135,14 @@ footer {
   letter-spacing: 6px;
   font-family: Lato;
   font-weight: 200;
+  min-height: 55px;
+}
+.navbar-nav {
+  margin-top: 2px;
+}
+
+.navbar-inverse {
+  background-color: #000000;
 }
 
 .navbar-inverse .navbar-nav > li > a {
