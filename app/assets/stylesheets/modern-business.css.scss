@@ -21,7 +21,9 @@ body {
 a {
   color: #eee;
 }
-
+a:visited {
+  color: #eee;
+}
 a:hover {
   color: #999999;
   text-decoration: none;
@@ -124,9 +126,6 @@ footer {
   max-width: 200px;
 }
 
-.opacity {
-  opacity: 0.8;
-}
 
 /* JUMBO BABIES */
 
@@ -139,7 +138,13 @@ footer {
 }
 
 .big-logo {
-  margin-top: 25px;
+
+}
+
+.social-header {
+  margin-top: 45px;
+  letter-spacing: 10px;
+  font-size: 1.2em;
 }
 
 /*nav stuffs*/
@@ -147,7 +152,7 @@ footer {
 .navbar {
   box-shadow: -1px 1px 1px #000;
   text-transform: uppercase;
-  letter-spacing: 6px;
+  letter-spacing: 5px;
   font-family: Lato;
   font-weight: 200;
   min-height: 55px;
