@@ -6,7 +6,8 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
 
     if @message.valid?
-      redirect_to new_message_path, notice: "Thankyou for your message."
+      MessageMailer.message_me(@message).deliver_now
+      redirect_to new_message_path, notice: "Thank you for your message."
     else
       render :new
     end

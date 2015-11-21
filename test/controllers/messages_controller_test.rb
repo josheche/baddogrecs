@@ -5,17 +5,26 @@ class MessagesControllerTest < ActionController::TestCase
     get :new
     assert_response :success
   end
-  test "successful post" do
-
-    post :create, message: {
-      name: 'josh',
-      email: 'josheche@gmail.com',
-      subject: 'hi',
-      content: 'test'
-    }
+  test "succesful post" do
+    assert_difference 'ActionMailer::Base.deliveries.size', 1 do
+      post :create, message: {
+        name: 'baddogrecs',
+        email: 'info@baddogrecs.com',
+        subject: 'hi',
+        content: 'test'
+      }
+    end
 
     assert_redirected_to new_message_path
-  end
+    last_email = ActionMailer::Base.deliveries.last
+
+    assert_equal "hi", last_email.subject
+    assert_equal 'josheche@gmail.com', last_email.to[0]
+    assert_equal 'info@baddogrecs.com', last_email.from[0]
+    assert_match(/test/, last_email.body.to_s)
+
+    ActionMailer::Base.deliveries.clear
+    end
   test "failed post" do
   post :create, message: {\
     name: '',
