@@ -5,5 +5,15 @@ class MessagesControllerTest < ActionController::TestCase
     get :new
     assert_response :success
   end
+  test "successful post" do
 
+    post :create, message: {
+      name: 'josh',
+      email: 'josheche@gmail.com',
+      subject: 'hi',
+      content: 'test'
+    }
+
+    assert_redirected_to new_message_path
+  end
 end
