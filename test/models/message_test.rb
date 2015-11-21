@@ -19,4 +19,8 @@ class MessageTest < ActiveSupport::TestCase
 
     assert msg.valid?
   end
+  test 'attributes can not be blank' do
+    msg = Message.new
+    refute msg.valid?
+  end
 end
